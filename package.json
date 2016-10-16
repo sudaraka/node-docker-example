@@ -4,7 +4,13 @@
   "private": true,
   "description": "Example project setup for developing _Node.Js_ web application using _Docker_ container as platform for development server and testing.",
   "main": "server.js",
+  "var": {
+    "container": "sudaraka/node-example"
+  },
   "scripts": {
+    "docker:build": "docker build -t $npm_package_var_container .",
+    "docker:clean": "docker rmi -f $npm_package_var_container",
+    "docker:start": "docker run -it --rm --name=api -p 5000:5000 -v `pwd`:/app $npm_package_var_container npm start",
     "start": "nodemon server.js",
     "test": "mocha server_spec.js"
   },
