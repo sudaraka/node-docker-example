@@ -12,11 +12,12 @@
 
 const
   { get } = require('axios'),
-  expect = require('expect')
+  expect = require('expect'),
+  API_URL = `http://${process.env.API_HOST || '127.0.0.1'}:5000/`
 
 describe('HTTP Server', () => {
   it('should respond with APP_NAME environment variable', () => {
-    return get('http://127.0.0.1:5000/')
+    return get(API_URL)
       .then(({ data }) => {
         expect(data.name).toBe(process.env.APP_NAME)
       })
