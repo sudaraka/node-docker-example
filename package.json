@@ -1,0 +1,25 @@
+{
+  "name": "node-docker-example",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Example project setup for developing _Node.Js_ web application using _Docker_ container as platform for development server and testing.",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "exit 0;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudaraka/node-docker-example.git"
+  },
+  "author": "Sudaraka Wijesinghe <sudaraka@sudaraka.org> (https://sudaraka.org/)",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/sudaraka/node-docker-example/issues"
+  },
+  "homepage": "https://github.com/sudaraka/node-docker-example#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0"
+  }
+}
